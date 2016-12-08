@@ -16,13 +16,13 @@ Learn everything you need to about the subject of this `Tutorialspoint` project.
 ## Topics
 ```
 Unix for Beginners
-[ ] Home
-[ ] Getting Started
-[ ] File Management
-[ ] Directories
-[ ] File Permission
-[ ] Environment
-[ ] Basic Utilities
+[x] Home
+[x] Getting Started
+[x] File Management
+[x] Directories
+[x] File Permission
+[x] Environment
+[x] Basic Utilities
 [ ] Pipes & Filters
 [ ] Processes
 [ ] Communication
