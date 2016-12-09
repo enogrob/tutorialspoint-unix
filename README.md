@@ -23,10 +23,10 @@ Unix for Beginners
 [x] File Permission
 [x] Environment
 [x] Basic Utilities
-[ ] Pipes & Filters
-[ ] Processes
-[ ] Communication
-[ ] The vi Editor
+[x] Pipes & Filters
+[x] Processes
+[x] Communication
+[x] The vi Editor
 Unix Shell Programming
 [ ] What is Shell?
 [ ] Using Variables
