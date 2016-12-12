@@ -1,0 +1,31 @@
+Script started on Mon Dec 12 09:58:13 2016
+]0;~/Things/Projects/tutorialspoint-unix/src[?1034h[35;1m[src (master)]$[0m date
+Mon Dec 12 09:59:45 BRST 2016
+]0;~/Things/Projects/tutorialspoint-unix/src[35;1m[src (master)]$[0m ls -la
+total 800
+drwxr-xr-x  7 enogrob  staff     238 Dec 12 10:02 [36m.[39;49m[0m
+drwxr-xr-x@ 9 enogrob  staff     306 Dec  9 00:41 [36m..[39;49m[0m
+-rw-r--r--@ 1 enogrob  staff    6148 Dec  7 22:09 .DS_Store
+-rw-r--rw-  1 enogrob  staff    4932 Dec  7 23:10 20161207_2247-typescript.log
+-rw-r--r--  1 enogrob  staff  381309 Dec  9 00:58 20161209_0038-typescript.log
+-rw-r--r--  1 enogrob  staff     234 Dec 12 10:00 20161212_0958-typescript.log
+-rwxr-xr-x@ 1 enogrob  staff     114 Dec 12 10:04 [31mtest.sh[39;49m[0m
+]0;~/Things/Projects/tutorialspoint-unix/src[35;1m[src (master)]$[0m chmod +x test.sh
+]0;~/Things/Projects/tutorialspoint-unix/src[35;1m[src (master)]$[0m ./test.sh
+/Users/enogrob/Things/Projects/tutorialspoint-unix/src
+20161207_2247-typescript.log 20161209_0038-typescript.log 20161212_0958-typescript.log [31mtest.sh[39;49m[0m
+]0;~/Things/Projects/tutorialspoint-unix/src[35;1m[src (master)]$[0m ./test.sh
+What is your name?
+Roberto Nogueira
+Hello, Roberto Nogueira
+]0;~/Things/Projects/tutorialspoint-unix/src[35;1m[src (master)]$[0m ./test.sh
+What is your name?
+Roberto
+Hello, Roberto
+Hello, Roberto
+./test.sh: line 11: PERSON: readonly variable
+]0;~/Things/Projects/tutorialspoint-unix/src[35;1m[src (master)]$[0m ./test.sh
+What is your name?
+Hello, 
+./test.sh: line 11: PERSON: readonly variable
+]0;~/Things/Projects/tutorialspoint-unix/src[35;1m[src (master)]$[0m 

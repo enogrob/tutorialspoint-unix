@@ -28,9 +28,9 @@ Unix for Beginners
 [x] Communication
 [x] The vi Editor
 Unix Shell Programming
-[ ] What is Shell?
-[ ] Using Variables
-[ ] Special Variables
+[x] What is Shell?
+[x] Using Variables
+[x] Special Variables
 [ ] Using Arrays
 [ ] Basic Operators
 [ ] Decision Making
