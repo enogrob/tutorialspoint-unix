@@ -31,8 +31,8 @@ Unix Shell Programming
 [x] What is Shell?
 [x] Using Variables
 [x] Special Variables
-[ ] Using Arrays
-[ ] Basic Operators
+[x] Using Arrays
+[~] Basic Operators
 [ ] Decision Making
 [ ] Shell Loops
 [ ] Loop Control
