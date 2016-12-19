@@ -32,10 +32,10 @@ Unix Shell Programming
 [x] Using Variables
 [x] Special Variables
 [x] Using Arrays
-[~] Basic Operators
-[ ] Decision Making
-[ ] Shell Loops
-[ ] Loop Control
+[x] Basic Operators
+[x] Decision Making
+[x] Shell Loops
+[x] Loop Control
 [ ] Shell Substitutions
 [ ] Quoting Mechanisms
 [ ] IO Redirections
