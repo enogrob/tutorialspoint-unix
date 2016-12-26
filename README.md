@@ -36,7 +36,7 @@ Unix Shell Programming
 [x] Decision Making
 [x] Shell Loops
 [x] Loop Control
-[ ] Shell Substitutions
+[x] Shell Substitutions
 [ ] Quoting Mechanisms
 [ ] IO Redirections
 [ ] Shell Functions
@@ -64,4 +64,3 @@ Selected Reading
 [ ] Computer Glossary
 [ ] Who is Who
 ````
- 
