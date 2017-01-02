@@ -37,8 +37,8 @@ Unix Shell Programming
 [x] Shell Loops
 [x] Loop Control
 [x] Shell Substitutions
-[ ] Quoting Mechanisms
-[ ] IO Redirections
+[x] Quoting Mechanisms
+[x] IO Redirections
 [ ] Shell Functions
 [ ] Manpage Help
 Advanced Unix
