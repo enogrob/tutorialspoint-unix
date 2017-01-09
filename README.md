@@ -39,7 +39,7 @@ Unix Shell Programming
 [x] Shell Substitutions
 [x] Quoting Mechanisms
 [x] IO Redirections
-[ ] Shell Functions
+[x] Shell Functions
 [ ] Manpage Help
 Advanced Unix
 [ ] Regular Expressions
