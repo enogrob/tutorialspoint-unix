@@ -40,7 +40,7 @@ Unix Shell Programming
 [x] Quoting Mechanisms
 [x] IO Redirections
 [x] Shell Functions
-[ ] Manpage Help
+[x] Manpage Help
 Advanced Unix
 [ ] Regular Expressions
 [ ] File System Basics
