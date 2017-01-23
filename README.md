@@ -42,7 +42,7 @@ Unix Shell Programming
 [x] Shell Functions
 [x] Manpage Help
 Advanced Unix
-[ ] Regular Expressions
+[~] Regular Expressions
 [ ] File System Basics
 [ ] User Administration
 [ ] System Performance
