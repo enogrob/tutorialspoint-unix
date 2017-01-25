@@ -217,8 +217,8 @@ As you can see from the output, the first five lines had the string sh changed t
 
 **The Matching Command**
 
-You would use p option along with -n option to print all the matching lines as follows −
-
+You would use `p` option along with -n option to print all the matching lines as follows −
+```
 $ cat testing | sed -n '/root/p'
 root:x:0:0:root user:/root:/bin/sh
 [root@ip-72-167-112-17 amrood]# vi testing
@@ -232,11 +232,14 @@ man:x:6:12:man:/var/cache/man:/bin/sh
 mail:x:8:8:mail:/var/mail:/bin/sh
 news:x:9:9:news:/var/spool/news:/bin/sh
 backup:x:34:34:backup:/var/backups:/bin/sh
-Using Regular Expression
+```
+
+**Using Regular Expression**
+
 While matching pattern, you can use regular expression which provides more flexibility.
 
 Check following example which matches all the lines starting with daemon and then deleting them −
-
+```
 $ cat testing | sed '/^daemon/d'
 root:x:0:0:root user:/root:/bin/sh
 bin:x:2:2:bin:/bin:/bin/sh
@@ -247,53 +250,76 @@ man:x:6:12:man:/var/cache/man:/bin/sh
 mail:x:8:8:mail:/var/mail:/bin/sh
 news:x:9:9:news:/var/spool/news:/bin/sh
 backup:x:34:34:backup:/var/backups:/bin/sh
-Following is the example which would delete all the lines ending with sh −
+```
 
+Following is the example which would delete all the lines ending with sh −
+```
 $ cat testing | sed '/sh$/d'
 sync:x:4:65534:sync:/bin:/bin/sync
+```
+
 The following table lists four special characters that are very useful in regular expressions.
 
-Character	Description
-^	Matches the beginning of lines.
-$	Matches the end of lines.
-.	Matches any single character.
-*	Matches zero or more occurrences of the previous character
-[chars]	Matches any one of the characters given in chars, where chars is a sequence of characters. You can use the - character to indicate a range of characters.
-Matching Characters
+`^` Matches the beginning of lines.
+
+`$` Matches the end of lines.
+
+`.` Matches any single character.
+
+`*` Matches zero or more occurrences of the previous character
+
+`[chars]`	Matches any one of the characters given in chars, where
+ `chars` is a sequence of characters. You can use the - character to indicate a range of characters.
+
+**Matching Characters**
+
 Look at a few more expressions to demonstrate the use of the metacharacters. For example, the following pattern −
 
-Expression	Description
-/a.c/	Matches lines that contain strings such as a+c, a-c, abc, match, and a3c, whereas the pattern
-/a*c/	Matches the same strings along with strings such as ace, yacc, and arctic.
-/[tT]he/	Matches the string The and the:
-/^$/	Matches Blank lines
-/^.*$/	Matches an entire line whatever it is.
-/ */	Matches one or more spaces
-/^$/	Matches Blank lines
+`/a.c/`	Matches lines that contain strings such as a+c, a-c, abc, match, and a3c, whereas the pattern.
+
+`/a*c/`	Matches the same strings along with strings such as ace, yacc, and arctic.
+
+`/[tT]he/`	Matches the string The and the.
+
+`/^$/`	Matches Blank lines.
+
+`/^.*$/`	Matches an entire line whatever it is.
+
+`/ */`	Matches one or more spaces.
+
+`/^$/`	Matches Blank lines.
+
 Following table shows some frequently used sets of characters −
 
-Set	Description
-[a-z]	Matches a single lowercase letter
-[A-Z]	Matches a single uppercase letter
-[a-zA-Z]	Matches a single letter
-[0-9]	Matches a single number
-[a-zA-Z0-9]	Matches a single letter or number
-Character Class Keywords
+`[a-z]`	Matches a single lowercase letter.
+
+`[A-Z]`	Matches a single uppercase letter.
+
+`[a-zA-Z]`	Matches a single letter.
+
+`[0-9]`	Matches a single number.
+
+`[a-zA-Z0-9]`	Matches a single letter or number.
+
+**Character Class Keywords**
+
 Some special keywords are commonly available to regexps, especially GNU utilities that employ regexps. These are very useful for sed regular expressions as they simplify things and enhance readability.
 
-For example, the characters a through z as well as the characters A through Z constitute one such class of characters that has the keyword [[:alpha:]]
+For example, the characters `a` through `z` as well as the characters `A` through `Z` constitute one such class of characters that has the keyword `[[:alpha:]]`.
 
-Using the alphabet character class keyword, this command prints only those lines in the /etc/syslog.conf file that start with a letter of the alphabet −
-
+Using the alphabet character class keyword, this command prints only those lines in the `/etc/syslog.conf` file that start with a letter of the alphabet −
+```
 $ cat /etc/syslog.conf | sed -n '/^[[:alpha:]]/p'
 authpriv.*                         /var/log/secure
 mail.*                             -/var/log/maillog
 cron.*                             /var/log/cron
 uucp,news.crit                     /var/log/spooler
 local7.*                           /var/log/boot.log
-The following table is a complete list of the available character class keywords in GNU sed.
+```
 
-Character Class	Description
+The following table is a complete list of the available character class keywords in GNU sed.
+```
+Character   Class	Description
 [[:alnum:]]	Alphanumeric [a-z A-Z 0-9]
 [[:alpha:]]	Alphabetic [a-z A-Z]
 [[:blank:]]	Blank characters (spaces or tabs)
@@ -306,17 +332,22 @@ Character Class	Description
 [[:space:]]	Whitespace
 [[:upper:]]	Uppercase letters [A-Z]
 [[:xdigit:]]	Hex digits [0-9 a-f A-F]
-Aampersand Referencing
-The sed metacharacter & represents the contents of the pattern that was matched. For instance, say you have a file called phone.txt full of phone numbers, such as the following −
+```
 
+**Aampersand Referencing**
+
+The sed metacharacter `&` represents the contents of the pattern that was matched. For instance, say you have a file called `phone.txt` full of phone numbers, such as the following −
+```
 5555551212
 5555551213
 5555551214
 6665551215
 6665551216
 7775551217
-You want to make the area code (the first three digits) surrounded by parentheses for easier reading. To do this, you can use the ampersand replacement character, like so −
+```
 
+You want to make the area code (the first three digits) surrounded by parentheses for easier reading. To do this, you can use the ampersand replacement character, like so −
+```
 $ sed -e 's/^[[:digit:]][[:digit:]][[:digit:]]/(&)/g' phone.txt
 (555)5551212
 (555)5551213
@@ -324,16 +355,21 @@ $ sed -e 's/^[[:digit:]][[:digit:]][[:digit:]]/(&)/g' phone.txt
 (666)5551215
 (666)5551216
 (777)5551217
-Here in pattern part you are matching first 3 digits and then using & you are replacing those 3 digits with surrounding parentheses.
+```
 
-Using Multiple sed Commands
+Here in pattern part you are matching first 3 digits and then using `&` you are replacing those 3 digits with surrounding parentheses.
+
+**Using Multiple sed Commands**
+
 You can use multiple sed commands in a single sed command as follows −
-
+```
 $ sed -e 'command1' -e 'command2' ... -e 'commandN' files
+```
+
 Here command1 through commandN are sed commands of the type discussed previously. These commands are applied to each of the lines in the list of files given by files.
 
 Using the same mechanism, we can write above phone number example as follows −
-
+```
 $ sed -e 's/^[[:digit:]]\{3\}/(&)/g'  \
                       -e 's/)[[:digit:]]\{3\}/&-/g' phone.txt
 (555)555-1212
@@ -342,23 +378,28 @@ $ sed -e 's/^[[:digit:]]\{3\}/(&)/g'  \
 (666)555-1215
 (666)555-1216
 (777)555-1217
-Note − In the above example, instead of repeating the character class keyword [[:digit:]] three times, you replaced it with \{3\}, which means to match the preceding regular expression three times. Here I used \ to give line break you should remove this before running this command.
+```
 
-Back References
+`Note` − In the above example, instead of repeating the character class keyword [[:digit:]] three times, you replaced it with \{3\}, which means to match the preceding regular expression three times. Here I used \ to give line break you should remove this before running this command.
+
+**Back References**
+
 The ampersand metacharacter is useful, but even more useful is the ability to define specific regions in a regular expressions so you can reference them in your replacement strings. By defining specific parts of a regular expression, you can then refer back to those parts with a special reference character.
 
-To do back references, you have to first define a region and then refer back to that region. To define a region you insert backslashed parentheses around each region of interest. The first region that you surround with backslashes is then referenced by \1, the second region by \2, and so on.
+To do back references, you have to first define a region and then refer back to that region. To define a region you insert backslashed parentheses around each region of interest. The first region that you surround with backslashes is then referenced by `\1`, the second region by `\2`, and so on.
 
 Assuming phone.txt has the following text −
-
+```
 (555)555-1212
 (555)555-1213
 (555)555-1214
 (666)555-1215
 (666)555-1216
 (777)555-1217
-Now try the following command −
+```
 
+Now try the following command −
+```
 $ cat phone.txt | sed 's/\(.*)\)\(.*-\)\(.*$\)/Area \
                        code: \1 Second: \2 Third: \3/'
 Area code: (555) Second: 555- Third: 1212
@@ -367,4 +408,6 @@ Area code: (555) Second: 555- Third: 1214
 Area code: (666) Second: 555- Third: 1215
 Area code: (666) Second: 555- Third: 1216
 Area code: (777) Second: 555- Third: 1217
-Note − In the above example each regular expression inside the parenthesis would be back referenced by \1, \2 and so on. Here I used \ to give line break you should remove this before running this command.
+```
+
+`Note` − In the above example each regular expression inside the parenthesis would be back referenced by `\1`, `\2` and so on. Here I used `\` to give line break you should remove this before running this command.
