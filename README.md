@@ -43,7 +43,7 @@ Unix Shell Programming
 [x] Manpage Help
 Advanced Unix
 [x] Regular Expressions
-[ ] File System Basics
+[x] File System Basics
 [ ] User Administration
 [ ] System Performance
 [ ] System Logging
