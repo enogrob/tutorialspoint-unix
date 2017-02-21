@@ -44,7 +44,7 @@ Unix Shell Programming
 Advanced Unix
 [x] Regular Expressions
 [x] File System Basics
-[ ] User Administration
+[x] User Administration
 [ ] System Performance
 [ ] System Logging
 [ ] Signals and Traps
