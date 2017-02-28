@@ -45,7 +45,7 @@ Advanced Unix
 [x] Regular Expressions
 [x] File System Basics
 [x] User Administration
-[ ] System Performance
+[x] System Performance
 [ ] System Logging
 [ ] Signals and Traps
 Unix Useful Resources
